@@ -33,3 +33,42 @@
   # Result 1
   # 2
 
+
+class Poly
+  def initialize
+   
+  end
+end
+class Addition < Poly
+
+  def addition
+    p "Enter value of A:"
+    a = gets.to_i
+    puts "You Entered #{a}"
+    p "Enter value of B:"
+    b = gets.to_i
+    puts "You Entered #{b}"
+    c = a+b
+    puts "Result #{c}"
+  end
+
+end
+class Concatination < Poly
+
+  def concatination
+    p "Enter value of A:"
+    a = gets.to_i
+    puts "You Entered #{a}"
+    p "Enter value of B:"
+    b = gets.to_i
+    puts "You Entered #{b}"
+    c = [a,b].join.to_i
+    puts "Result #{c}"
+  end
+end
+
+add=Addition.new
+add.addition
+concate=Concatination.new
+concate.concatination
+

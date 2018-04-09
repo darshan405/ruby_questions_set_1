@@ -5,9 +5,9 @@
 
 # >1
 # Enter file name:
-# >Hello.txt
+# Hello.txt
 # Enter text:
-# >Hi welcome to ruby prog
+# Hi welcome to ruby prog
 # New file Hello.txt is created!
 
 # >2
@@ -17,3 +17,10 @@
 #        Or
 # File not found
 
+aFile = File.new("hello.txt", "r+")
+if aFile
+   content = aFile.sysread(100)
+   puts "content"
+else
+   puts "Unable to add file!"
+end
