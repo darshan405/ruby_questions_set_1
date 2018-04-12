@@ -34,41 +34,67 @@
   # 2
 
 
-class Poly
-  def initialize
-   
+#   class Ploy 
+#   def add
+#     puts "Enter the first integer:"
+#     @a=Integer(gets)
+#     puts "Enter the second integer:"
+#     @b=Integer(gets)
+#   end
+# end
+# class Addition < Ploy
+#   def add
+#     super
+#     @c=@a+@b
+#     puts "Result : #{@c}"
+#   end
+# end
+# class Concatination < Ploy
+#   def add
+#     super
+#     print "#{@a}#{@b}\n"
+#   end
+# end
+
+# a=Addition.new
+# a.add
+# b=Concatination.new
+# b.add
+
+class Poly 
+    def add_con(person)
+        person.add_con
+    end
+    # def con(person)
+    #     person.con
+    # end
+end
+class Addition
+
+    def add_con
+        puts "Enter the first integer:"
+        @a=Integer(gets)
+        puts "Enter the second integer:"
+        @b=Integer(gets)
+        @c=@a+@b
+        puts "Result : #{@c}"
+    end
+end
+class Concatination
+    def add_con
+        puts "Enter the first integer:"
+        @a=Integer(gets)
+        puts "Enter the second integer:"
+        @b=Integer(gets)
+        print "#{@a}#{@b}\n"
   end
 end
-class Addition < Poly
 
-  def addition
-    p "Enter value of A:"
-    a = gets.to_i
-    puts "You Entered #{a}"
-    p "Enter value of B:"
-    b = gets.to_i
-    puts "You Entered #{b}"
-    c = a+b
-    puts "Result #{c}"
-  end
 
-end
-class Concatination < Poly
-
-  def concatination
-    p "Enter value of A:"
-    a = gets.to_i
-    puts "You Entered #{a}"
-    p "Enter value of B:"
-    b = gets.to_i
-    puts "You Entered #{b}"
-    c = [a,b].join.to_i
-    puts "Result #{c}"
-  end
-end
-
-add=Addition.new
-add.addition
-concate=Concatination.new
-concate.concatination
-
+welcome = Poly.new
+puts "=======Addition========="
+a = Addition.new
+welcome.add_con(a)
+puts "========Concatination======="
+c= Concatination.new
+welcome.add_con(c)
